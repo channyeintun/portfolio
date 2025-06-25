@@ -1,57 +1,129 @@
 import ProjectCard from "@/components/ProjectCard";
 import type { Project } from "@/lib/types";
+import sarphat from "@/assets/sarphat.webp";
+import anicana from "@/assets/anicana.webp";
+import home_channel from "@/assets/home-channel.webp";
+import web_channel from "@/assets/web-channel.webp";
+import public_channel from "@/assets/public-channel.webp";
+import dashboard_channel from "@/assets/dashboard-channel.webp";
+import meec from "@/assets/meec.webp";
+import strapi_meec from "@/assets/strapi-meec.webp";
+import sssp from "@/assets/ss-sp.webp";
+import nexretail from "@/assets/nexretail.webp";
+import hr from "@/assets/hr.webp";
+import invoiceapp from "@/assets/invoice-app.webp";
+import code2 from "@/assets/code2.webp";
+import ellsa from "@/assets/ellsa-ai.webp";
+import live2dcubism from "@/assets/live2d-cubism-ai.webp";
+import fbdl from "@/assets/fbdl.webp";
+import offlinelearning from "@/assets/offline-learn.webp";
 
 const projects: Project[] = [
   {
-    title: "Channel.org Frontend",
+    title: "Channel.org",
     description: "Built a new frontend for a distributed social media platform, a fork of Mastodon, enhancing user experience and performance.",
-    techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query"],
-    images: ["https://placehold.co/600x400.png", "https://placehold.co/600x401.png", "https://placehold.co/600x402.png"],
-    link: "#",
+    techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query", "Ruby on Rails", "PostgreSQL"],
+    images: [home_channel, web_channel, public_channel, dashboard_channel],
+    link: "https://home.channel.org/",
     dataAiHint: "social media",
     company: "BinaryLab",
   },
   {
     title: "SarPhat Publishing Platform",
-    description: "A comprehensive digital publishing solution for authors and publishers in Myanmar, featuring an ebook reader and marketplace.",
-    techStack: ["React", "Redux", "Firebase", "Styled-Components"],
-    images: ["https://placehold.co/600x400.png", "https://placehold.co/600x401.png"],
-    link: "#",
-    dataAiHint: "books publishing",
-    company: "A-STAR",
+    description: "A comprehensive digital publishing solution for authors and publishers in Myanmar",
+    techStack: ["React", "Next.js", "JavaScript", "Shadcn-UI", "XState", "Java", "Spring Boot", "MySQL"],
+    images: [sarphat],
+    link: "https://sarphat.com/",
+    dataAiHint: "online publishing",
+    company: "Nexcode",
   },
   {
     title: "Anicana Web3 Platform",
-    description: "Developed the frontend for a decentralized platform for anime and manga fans, integrating with blockchain technologies.",
-    techStack: ["Next.js", "TypeScript", "Ethers.js", "GraphQL"],
-    images: ["https://placehold.co/600x400.png"],
-    link: "#",
-    dataAiHint: "anime crypto",
+    description: "Developed the frontend for a decentralized platform for games, integrating with blockchain technologies.",
+    techStack: ["React.js", "TypeScript", "web3.js", "PHP", "Laravel"],
+    images: [anicana],
+    link: "https://anicana.org/",
+    dataAiHint: "Loftal",
+    company: "Loftal",
   },
   {
-    title: "Portfolio Website",
-    description: "My personal portfolio to showcase my work, skills, and experience. Built with the latest web technologies.",
-    techStack: ["Next.js", "TypeScript", "TailwindCSS", "Firebase"],
-    images: ["https://placehold.co/600x400.png"],
-    link: "/",
-    dataAiHint: "developer portfolio",
+    title: "ELLA Translation AI",
+    description: "Developed the frontend for an AI-powered translation platform, enabling real-time language translation and transcription.",
+    techStack: ["React.js", "Live2D Cubism", "OpenAI", "Google Speech Recognition", "Azure AI Speech", "PHP", "Laravel"],
+    images: [ellsa, live2dcubism],
+    link: "https://translate-dev.loftal.jp/",
+    dataAiHint: "Loftal",
+    company: "Loftal",
   },
-   {
-    title: "E-commerce Dashboard",
-    description: "A comprehensive analytics dashboard for an e-commerce client to track sales, inventory, and customer behavior.",
-    techStack: ["React", "D3.js", "Node.js", "Express"],
-    images: ["https://placehold.co/600x400.png", "https://placehold.co/600x401.png"],
-    link: "#",
+  {
+    title: "Sheng Siong Supplier Portal",
+    description: "Built new features for the Sheng Siong supplier portal including microservices and a data analytics dashboard.",
+    techStack: ["Next.js", "Strapi.js", "Node.js", "Express"],
+    images: [sssp],
+    link: "https://shengsiong.com.sg/",
     dataAiHint: "dashboard analytics",
-    company: "Oozou",
+    company: "NexStack",
   },
   {
-    title: "Mobile Banking App",
-    description: "A cross-platform mobile banking application with a focus on security and user experience.",
-    techStack: ["React Native", "TypeScript", "Redux Saga"],
-    images: ["https://placehold.co/600x400.png"],
+    title: "Invoice and Quotation",
+    description: "Built new features for the Invoice & Quotation platform",
+    techStack: ["Next.js", "Strapi.js", "GraphQL"],
+    images: [invoiceapp],
+    link: "https://mystock.onlineinvoices.com/",
+    dataAiHint: "Invoice and Quotation",
+    company: "NexStack",
+  },
+  {
+    title: "Nex App HR Management System",
+    description: "Developed a mobile application for the Nex App HR Management System, a comprehensive solution for managing human resources.",
+    techStack: ["Next.js", "Strapi.js", "React Native", "GraphQL"],
+    images: [hr],
     link: "#",
-    dataAiHint: "mobile banking",
+    dataAiHint: "HR Management System",
+    company: "NexStack",
+  },
+  {
+    title: "NexRetail POS and Backoffice Management System",
+    description: "Built the whole NexRetail POS and Backoffice Management System",
+    techStack: ["React.js", "Java", "Spring Boot", "MySQL"],
+    images: [nexretail],
+    link: "https://digitalbase.com.mm/enterprise",
+    dataAiHint: "POS and Backoffice Management System",
+    company: "Nexcode",
+  },
+  {
+    title: "Code2 E-Learning Platform",
+    description: "Developed a comprehensive e-learning platform with features for online courses",
+    techStack: ["React.js", "Java", "Spring Boot", "MySQL"],
+    images: [code2],
+    link: "https://code2learning.com/",
+    dataAiHint: "E-Learning Platform",
+    company: "Nexcode",
+  },
+  {
+    title: "MEEC Website",
+    description: "A responsive website with content management features for MEEC.",
+    techStack: ["Next.js", "TypeScript", "Strapi.js", "PostgreSQL"],
+    images: [meec, strapi_meec],
+    link: "https://meec-web.vercel.app/en",
+    dataAiHint: "website development",
+    company: "MEEC"
+  },
+  {
+    title: "HD Facebook Video Downloader",
+    description: "FFMPEG powered app for downloading Facebook videos in high definition.",
+    techStack: ["Next.js", "JavaScript", "ffmpeg"],
+    images: [fbdl],
+    link: "https://save-fb-video.vercel.app/",
+    dataAiHint: "facebook video downloader",
+  },
+  {
+    title: "Offline Learning App",
+    description: "A simple offline learning app to save progress and access content without internet.",
+    techStack: ["Go", "HTML5"],
+    images: [offlinelearning],
+    link: "https://github.com/channyeintun/offline-learning-platform",
+    dataAiHint: "offline learning app",
   },
 ];
 

@@ -2,7 +2,7 @@ export interface Project {
   title: string;
   description: string;
   techStack: string[];
-  images: string[];
+  images: string[] | any[];
   link: string;
   dataAiHint: string;
   company?: string;

@@ -1,14 +1,17 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Experience } from "@/lib/types";
-import { Award, Briefcase, Calendar, GraduationCap, MapPin, Home, Globe } from "lucide-react";
+import { Award, Calendar, GraduationCap, MapPin, Home, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import thinkfs from "@/assets/think-fs.webp";
+import si from "@/assets/si.webp";
+import eq from "@/assets/eq.webp";
 
 const skills = [
   "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)",
   "React Native", "Redux", "GraphQL", "REST APIs", "TailwindCSS",
-  "HTML5", "CSS3", "a11y", "Go", "Java", "Spring Boot", "Git"
+  "HTML5", "CSS3", "a11y", "Go", "Java", "Kotlin", "Spring Boot", "Docker", "Git"
 ];
 
 const workExperience: Experience[] = [
@@ -97,19 +100,19 @@ const readingList = [
   {
     title: "Thinking, Fast and Slow",
     author: "Daniel Kahneman",
-    image: "https://placehold.co/150x225.png",
+    image: thinkfs,
     dataAiHint: "book cover"
   },
   {
     title: "Surrounded by Idiots",
     author: "Thomas Erikson",
-    image: "https://placehold.co/150x225.png",
+    image: si,
     dataAiHint: "book cover"
   },
   {
     title: "Emotional Intelligence",
     author: "Daniel Goleman",
-    image: "https://placehold.co/150x225.png",
+    image: eq,
     dataAiHint: "book cover"
   },
 ];
