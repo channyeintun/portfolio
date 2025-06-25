@@ -18,7 +18,7 @@ export default function ContactPage() {
             <Mail className="h-8 w-8 text-primary" />
             <div>
               <h3 className="text-lg font-semibold">Email</h3>
-              <p className="text-muted-foreground group-hover:text-primary transition-colors">contact@channyeintun.dev</p>
+              <p className="text-muted-foreground group-hover:text-primary transition-colors">chanyeintun@gmail.com</p>
             </div>
           </a>
           <Link href="https://github.com/channyeintun" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group p-4 rounded-lg transition-colors hover:bg-card">
