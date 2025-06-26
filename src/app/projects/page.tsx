@@ -35,7 +35,7 @@ const projects: Project[] = [
     images: [home_channel, web_channel, public_channel, dashboard_channel],
     link: "https://home.channel.org/",
     dataAiHint: "social media",
-    company: "BinaryLab",
+    company: "Newsmast",
   },
   {
     title: "Patchwork Communities CLI",
@@ -44,7 +44,7 @@ const projects: Project[] = [
     images: [cli],
     link: "https://www.npmjs.com/package/@newsmast/patchwork-communities-cli",
     dataAiHint: "command line interface",
-    company: "BinaryLab",
+    company: "Newsmast",
   },
   {
     title: "SarPhat Publishing Platform",
