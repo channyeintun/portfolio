@@ -17,22 +17,14 @@ const skills = [
 
 const workExperience: Experience[] = [
   {
-    company: "BinaryLab",
-    companyUrl: "https://binarylab.io/",
-    location: "Yangon, Myanmar",
+    company: "TypeScript Developer",
+    location: "Bangkok, Thailand",
     workType: "Remote",
-    roles: [
-      {
-        title: "Technical Project Manager",
-        period: "May 2025 – present",
-        description: "Promoted to oversee project lifecycles, from planning and resource allocation to final delivery. Act as a bridge between technical teams and stakeholders to ensure project goals are met on time and within budget."
-      },
-      {
-        title: "Lead Frontend Developer",
-        period: "Oct 2024 – Apr 2025",
-        description: "Guided the frontend team in developing high-quality, user-centric interfaces. Established best practices, conducted code reviews, and drove the technical direction of the user experience."
-      }
-    ]
+    roles: [{
+      title: "",
+      period: "Oct 2024 – present",
+      description: "Currently contributing to an innovative project, focusing on building scalable and robust solutions with TypeScript. My work involves developing clean, efficient code and collaborating with a talented team in a fast-paced environment."
+    }]
   },
   {
     company: "Nexcode",
