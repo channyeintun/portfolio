@@ -10,7 +10,7 @@ import eq from "@/assets/eq.webp";
 
 const skills = [
   "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)",
-  "React Native", "Redux", "GraphQL", "REST APIs", "TailwindCSS",
+  "React Native", "Redux", "TanStack Query", "GraphQL", "REST APIs", "TailwindCSS",
   "HTML5", "CSS3", "a11y", "Go", "Java", "Kotlin", "Spring Boot", "Docker", "Git"
 ];
 
@@ -124,7 +124,7 @@ export default function AboutPage() {
       <section className="space-y-6">
         <h1 className="text-4xl font-bold font-headline text-center">About Me</h1>
         <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-        I'm a frontend developer who loves crafting elegant code and is always excited to learn something new. Outside of the digital world, I'm an avid swimmer, a keen reader, and enjoy playing the guitar—hobbies that fuel both my creativity and my approach to problem-solving.
+          I'm a frontend developer who loves crafting elegant code and is always excited to learn something new. Outside of the digital world, I'm an avid swimmer, a keen reader, and enjoy playing the guitar—hobbies that fuel both my creativity and my approach to problem-solving.
         </p>
       </section>
 
@@ -182,7 +182,7 @@ export default function AboutPage() {
                         <span>{exp.workType}</span>
                       </div>
                     )}
-                    {exp.roles.length > 1 && 
+                    {exp.roles.length > 1 &&
                       <Badge variant="secondary" className="shrink-0">{`${exp.roles.length} roles`}</Badge>
                     }
                   </div>
@@ -227,7 +227,7 @@ export default function AboutPage() {
                   <MapPin className="h-4 w-4" />
                   <span>Mandalay, Myanmar</span>
                 </div>
-                 <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
                   <span>Graduated 2019</span>
                 </div>
