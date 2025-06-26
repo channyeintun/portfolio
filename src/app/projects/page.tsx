@@ -19,6 +19,14 @@ import fbdl from "@/assets/fbdl.webp";
 import offlinelearning from "@/assets/offline-learn.webp";
 
 const projects: Project[] = [
+   {
+    title: "Resolve Git Conflicts Easily with Github Desktop [Burmese]",
+    description: "A tutorial video explaining how to resolve Git conflicts using the GitHub Desktop application, presented in Burmese.",
+    techStack: ["Git", "GitHub Desktop"],
+    images: [],
+    link: "https://www.youtube.com/watch?v=fHCbK-F9-Q8",
+    dataAiHint: "git conflict",
+  },
   {
     title: "Channel.org",
     description: "Built a new frontend for a distributed social media platform, a fork of Mastodon, enhancing user experience and performance.",
