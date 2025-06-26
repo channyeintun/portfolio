@@ -21,7 +21,7 @@ export default function Home() {
               &ldquo;Welcome! I&apos;m glad you&apos;re here. Take a look around and discover what I have to offer.&rdquo;
             </p>
             <p className="text-muted-foreground md:text-lg">
-              Experienced software engineer with nearly 5 years specializing in React.js and Next.js. Passionate about building modern, responsive, and user-friendly web applications.
+              Experienced software engineer with 5 years specializing in React.js and Next.js. Passionate about building modern, responsive, and user-friendly web applications.
             </p>
           </div>
           <div className="flex flex-col gap-4 min-[400px]:flex-row justify-center flex-wrap">
