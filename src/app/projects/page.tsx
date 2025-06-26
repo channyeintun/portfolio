@@ -17,6 +17,7 @@ import ellsa from "@/assets/ellsa-ai.webp";
 import live2dcubism from "@/assets/live2d-cubism-ai.webp";
 import fbdl from "@/assets/fbdl.webp";
 import offlinelearning from "@/assets/offline-learn.webp";
+import cli from "@/assets/cli.webp";
 
 const projects: Project[] = [
    {
@@ -34,6 +35,15 @@ const projects: Project[] = [
     images: [home_channel, web_channel, public_channel, dashboard_channel],
     link: "https://home.channel.org/",
     dataAiHint: "social media",
+    company: "BinaryLab",
+  },
+  {
+    title: "Patchwork Communities CLI",
+    description: "NPM CLI for adding communities features to Mastodon.",
+    techStack: ["TypeScript", "React.js", "Mastodon", "Ruby on Rails", "Chalk", "Ora"],
+    images: [cli],
+    link: "https://www.npmjs.com/package/@newsmast/patchwork-communities-cli",
+    dataAiHint: "command line interface",
     company: "BinaryLab",
   },
   {
