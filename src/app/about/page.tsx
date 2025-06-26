@@ -205,7 +205,7 @@ export default function AboutPage() {
                         <div key={roleIndex} className="relative pl-8">
                           <div className="absolute left-2 top-1.5 h-3 w-3 -translate-x-1/2 rounded-full bg-background border-2 border-primary" />
                           <div>
-                            <h3 className="text-xl font-headline font-semibold">{role.title}</h3>
+                            {role.title && <h3 className="text-xl font-headline font-semibold">{role.title}</h3>}
                             <p className="text-sm text-primary mt-1">{role.period}</p>
                             <p className="text-muted-foreground mt-2">{role.description}</p>
                           </div>
