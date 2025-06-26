@@ -57,15 +57,6 @@ const projects: Project[] = [
     company: "Loftal",
   },
   {
-    title: "ELLA Translation AI",
-    description: "Developed the frontend for an AI-powered translation platform, enabling real-time language translation and transcription.",
-    techStack: ["React.js", "Live2D Cubism", "OpenAI", "Google Speech Recognition", "Azure AI Speech", "PHP", "Laravel"],
-    images: [ellsa, live2dcubism],
-    link: "https://translate-dev.loftal.jp/",
-    dataAiHint: "Loftal",
-    company: "Loftal",
-  },
-  {
     title: "Sheng Siong Supplier Portal",
     description: "Built new features for the Sheng Siong supplier portal including microservices and a data analytics dashboard.",
     techStack: ["Next.js", "Strapi.js", "Node.js", "Express"],
@@ -118,6 +109,15 @@ const projects: Project[] = [
     link: "https://meec-web.vercel.app/en",
     dataAiHint: "website development",
     company: "MEEC"
+  },
+   {
+    title: "ELLA Translation AI",
+    description: "Developed the frontend for an AI-powered translation platform, enabling real-time language translation and transcription.",
+    techStack: ["React.js", "Live2D Cubism", "OpenAI", "Google Speech Recognition", "Azure AI Speech", "PHP", "Laravel"],
+    images: [ellsa, live2dcubism],
+    link: "https://translate-dev.loftal.jp/",
+    dataAiHint: "Loftal",
+    company: "Loftal",
   },
   {
     title: "Patchwork Communities CLI",
