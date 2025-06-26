@@ -36,7 +36,7 @@ export default function ProjectCard({ title, description, techStack, images, lin
                       src={image}
                       alt={`${title} screenshot ${index + 1}`}
                       fill
-                      className="object-cover rounded-t-lg"
+                      className="object-cover rounded-t-lg object-top"
                       data-ai-hint={dataAiHint}
                     />
                   </div>
