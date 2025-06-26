@@ -88,6 +88,13 @@ const certifications = [
     icon: Award,
   },
   {
+    name: "TypeScript Pro Essentials workshop",
+    issuer: "TotalTypeScript.com",
+    date: "July 17, 2024",
+    url: "https://res.cloudinary.com/total-typescript/image/upload/v1721190251/certificate/8fe01992-d8c1-47a7-bfbb-1caa753ac77c/typescript-pro-essentials.png",
+    icon: Award,
+  },
+  {
     name: "The AI Engineer Path",
     issuer: "Scrimba",
     date: "June 14, 2025",
