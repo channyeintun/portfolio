@@ -84,7 +84,7 @@ const projects: Project[] = [
   {
     title: "Nex App HR Management System",
     description: "Developed a mobile application for the Nex App HR Management System, a comprehensive solution for managing human resources.",
-    techStack: ["Next.js", "Strapi.js", "React Native", "GraphQL"],
+    techStack: ["Next.js", "Strapi.js", "React Native", "GraphQL", "Pdf.js", "Puppeteer"],
     images: [hr],
     link: "#",
     dataAiHint: "HR Management System",
@@ -111,7 +111,7 @@ const projects: Project[] = [
   {
     title: "MEEC Website",
     description: "A responsive website with content management features for MEEC.",
-    techStack: ["Next.js", "TypeScript", "Strapi.js", "PostgreSQL"],
+    techStack: ["Next.js", "TypeScript", "Strapi.js", "PostgreSQL", "GraphQL"],
     images: [meec, strapi_meec],
     link: "https://meec-web.vercel.app/en",
     dataAiHint: "website development",
