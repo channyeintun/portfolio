@@ -48,6 +48,15 @@ const projects: Project[] = [
     company: "Nexcode",
   },
   {
+    title: "MEEC Website",
+    description: "A responsive website with content management features for MEEC.",
+    techStack: ["Next.js", "TypeScript", "Strapi.js", "PostgreSQL", "GraphQL", "PM2"],
+    images: [meec, strapi_meec],
+    link: "https://meec-web.vercel.app/en",
+    dataAiHint: "website development",
+    company: "MEEC"
+  },
+  {
     title: "Anicana Web3 Platform",
     description: "Developed the frontend for a decentralized platform for games, integrating with blockchain technologies.",
     techStack: ["React.js", "TypeScript", "web3.js", "PHP", "Laravel"],
@@ -100,15 +109,6 @@ const projects: Project[] = [
     link: "https://code2learning.com/",
     dataAiHint: "E-Learning Platform",
     company: "Nexcode",
-  },
-  {
-    title: "MEEC Website",
-    description: "A responsive website with content management features for MEEC.",
-    techStack: ["Next.js", "TypeScript", "Strapi.js", "PostgreSQL", "GraphQL", "PM2"],
-    images: [meec, strapi_meec],
-    link: "https://meec-web.vercel.app/en",
-    dataAiHint: "website development",
-    company: "MEEC"
   },
    {
     title: "ELLA Translation AI",
