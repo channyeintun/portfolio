@@ -7,6 +7,7 @@ import Link from "next/link";
 import thinkfs from "@/assets/think-fs.webp";
 import si from "@/assets/si.webp";
 import eq from "@/assets/eq.webp";
+import { RubiksCube } from "@/components/RubiksCube";
 
 const skills = [
   "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)",
@@ -262,6 +263,23 @@ export default function AboutPage() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold font-headline text-center mb-12">More Than Code</h2>
+        <Card className="max-w-3xl mx-auto overflow-hidden">
+          <CardContent className="p-0 sm:p-8 flex flex-col sm:flex-row items-center gap-8">
+            <div className="w-full sm:w-auto flex-shrink-0 bg-accent flex justify-center py-8 sm:p-0 sm:bg-transparent">
+              <RubiksCube />
+            </div>
+            <div className="text-center sm:text-left px-8 pb-8 sm:p-0">
+              <h3 className="text-2xl font-headline font-semibold mb-4">A Hobby in Hand</h3>
+              <p className="text-lg text-muted-foreground">
+                Beyond programming, I enjoy the mental challenge and dexterity of solving a Rubik's Cube. It's a great way to unwind and keep my problem-solving skills sharp. I use both the beginner's method for fun and the more advanced CFOP method.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
       </section>
 
       <section className="mt-16">
