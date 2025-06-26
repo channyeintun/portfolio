@@ -18,6 +18,7 @@ import live2dcubism from "@/assets/live2d-cubism-ai.webp";
 import fbdl from "@/assets/fbdl.webp";
 import offlinelearning from "@/assets/offline-learn.webp";
 import cli from "@/assets/cli.webp";
+import qr from "@/assets/qr.webp";
 
 const projects: Project[] = [
    {
@@ -142,6 +143,14 @@ const projects: Project[] = [
     images: [offlinelearning],
     link: "https://github.com/channyeintun/offline-learning-platform",
     dataAiHint: "offline learning app",
+  },
+   {
+    title: "Implemented Rounded Shape for QR Code",
+    description: "Contributed to the QR Code library to implement rounded shapes for QR codes, enhancing visual appeal.",
+    techStack: ["JavaScript", "QR"],
+    images: [qr],
+    link: " https://github.com/devtrice/qr-x/pull/51",
+    dataAiHint: "Rounded QR Code",
   },
 ];
 
