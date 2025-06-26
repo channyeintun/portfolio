@@ -39,15 +39,6 @@ const projects: Project[] = [
     company: "Newsmast",
   },
   {
-    title: "Patchwork Communities CLI",
-    description: "NPM CLI for adding communities features to Mastodon.",
-    techStack: ["TypeScript", "React.js", "Mastodon", "Ruby on Rails", "Chalk", "Ora"],
-    images: [cli],
-    link: "https://www.npmjs.com/package/@newsmast/patchwork-communities-cli",
-    dataAiHint: "command line interface",
-    company: "Newsmast",
-  },
-  {
     title: "SarPhat Publishing Platform",
     description: "A comprehensive digital publishing solution for authors and publishers in Myanmar",
     techStack: ["React.js", "Next.js", "JavaScript", "Shadcn-UI", "XState", "Java", "Spring Boot", "MySQL"],
@@ -127,6 +118,15 @@ const projects: Project[] = [
     link: "https://meec-web.vercel.app/en",
     dataAiHint: "website development",
     company: "MEEC"
+  },
+  {
+    title: "Patchwork Communities CLI",
+    description: "NPM CLI for adding communities features to Mastodon.",
+    techStack: ["TypeScript", "React.js", "Mastodon", "Ruby on Rails", "Chalk", "Ora"],
+    images: [cli],
+    link: "https://www.npmjs.com/package/@newsmast/patchwork-communities-cli",
+    dataAiHint: "command line interface",
+    company: "Newsmast",
   },
   {
     title: "HD Facebook Video Downloader",
