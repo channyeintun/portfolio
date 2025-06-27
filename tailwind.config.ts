@@ -84,10 +84,14 @@ export default {
             height: '0',
           },
         },
+        'blink-color': {
+          '50%': { 'background-color': 'hsl(var(--primary) / 0.4)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'blink-color': 'blink-color 2s infinite ease-in-out',
       },
     },
   },
