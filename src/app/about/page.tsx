@@ -8,6 +8,7 @@ import thinkfs from "@/assets/think-fs.webp";
 import si from "@/assets/si.webp";
 import eq from "@/assets/eq.webp";
 import { RubiksCube } from "@/components/RubiksCube";
+import avatar from "@/assets/avatar.webp";
 
 const skills = [
   "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)",
@@ -121,11 +122,24 @@ const readingList = [
 export default function AboutPage() {
   return (
     <div className="container mx-auto max-w-5xl py-12 px-4 sm:px-6 lg:px-8">
-      <section className="space-y-6">
-        <h1 className="text-4xl font-bold font-headline text-center">About Me</h1>
-        <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto">
-          I'm a frontend developer who loves crafting elegant code and is always excited to learn something new. Outside of the digital world, I'm an avid swimmer, a keen reader, and enjoy playing the guitar—hobbies that fuel both my creativity and my approach to problem-solving.
-        </p>
+      <section className="grid md:grid-cols-3 gap-8 md:gap-12 items-center">
+        <div className="md:col-span-1 flex justify-center md:justify-start">
+          <Image
+            src={avatar}
+            alt="A photo of Chan Nyein Tun"
+            width={400}
+            height={500}
+            className="clip-torn-paper object-cover w-full max-w-[300px] md:max-w-full"
+            priority
+            data-ai-hint="profile photo"
+          />
+        </div>
+        <div className="md:col-span-2 space-y-4">
+          <h1 className="text-4xl font-bold font-headline text-center md:text-left">About Me</h1>
+          <p className="text-lg text-muted-foreground text-center md:text-left">
+            I'm a frontend developer who loves crafting elegant code and is always excited to learn something new. Outside of the digital world, I'm an avid swimmer, a keen reader, and enjoy playing the guitar—hobbies that fuel both my creativity and my approach to problem-solving.
+          </p>
+        </div>
       </section>
 
       <section className="mt-16">
