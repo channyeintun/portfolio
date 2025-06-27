@@ -24,7 +24,7 @@ const workExperience: Experience[] = [
     roles: [{
       title: "",
       period: "Oct 2024 – present",
-      description: "Currently contributing to an innovative project, focusing on building scalable and robust solutions with TypeScript. My work involves developing clean, efficient code and collaborating with a talented team in a fast-paced environment."
+      description: ""
     }]
   },
   {
@@ -127,8 +127,8 @@ export default function AboutPage() {
           <Image
             src={avatar}
             alt="A photo of Chan Nyein Tun"
-            width={400}
-            height={500}
+            width={300}
+            height={300}
             className="clip-torn-paper object-cover w-full max-w-[300px] md:max-w-full"
             priority
             data-ai-hint="profile photo"
