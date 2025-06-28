@@ -36,7 +36,7 @@ const projects: Project[] = [
     images: [home_channel, web_channel, public_channel, dashboard_channel],
     link: "https://home.channel.org/",
     dataAiHint: "social media",
-    company: "Newsmast",
+    company: "Patchwork",
   },
   {
     title: "SarPhat Publishing Platform",
@@ -118,15 +118,6 @@ const projects: Project[] = [
     link: "https://translate-dev.loftal.jp/",
     dataAiHint: "Loftal",
     company: "Loftal",
-  },
-  {
-    title: "Patchwork Communities CLI",
-    description: "NPM CLI for adding communities features to Mastodon.",
-    techStack: ["TypeScript", "React.js", "Mastodon", "Ruby on Rails", "Chalk", "Ora"],
-    images: [cli],
-    link: "https://www.npmjs.com/package/@newsmast/patchwork-communities-cli",
-    dataAiHint: "command line interface",
-    company: "Newsmast",
   },
   {
     title: "HD Facebook Video Downloader",
