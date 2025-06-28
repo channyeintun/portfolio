@@ -36,7 +36,7 @@ const projects: Project[] = [
     images: [home_channel, web_channel, public_channel, dashboard_channel],
     link: "https://home.channel.org/",
     dataAiHint: "social media",
-    company: "Patchwork",
+    company: "Channels",
   },
   {
     title: "SarPhat Publishing Platform",
@@ -45,7 +45,7 @@ const projects: Project[] = [
     images: [sarphat],
     link: "https://sarphat.com/",
     dataAiHint: "online publishing",
-    company: "Nexcode",
+    company: "SarPhat",
   },
   {
     title: "MEEC Website",
