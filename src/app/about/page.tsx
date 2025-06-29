@@ -14,7 +14,7 @@ import duolingo from "@/assets/duolingo.webp";
 
 const skills = [
   "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)",
-  "React Native", "Redux", "TanStack Query", "GraphQL", "REST APIs", "TailwindCSS",
+  "React Native", "Redux", "TanStack Query", "TanStack Virtual", "GraphQL", "REST APIs", "TailwindCSS",
   "HTML5", "CSS3", "a11y", "Go", "Java", "Kotlin", "Spring Boot", "Docker", "Git", "GitHub Actions"
 ];
 
