@@ -35,7 +35,7 @@ export function LanguageProgressBar({ progress, url, imageUrl, dataAiHint, child
         <span className="relative pb-1.5 px-1 group">
             {children}
             {bar}
-            {(url || imageUrl) && <ExternalLink className="absolute -top-0.5 -right-2 h-3.5 w-3.5 text-muted-foreground opacity-0 transition-all group-hover:opacity-100 group-hover:text-primary" />}
+            {(url || imageUrl) && <ExternalLink className="absolute -top-0.5 -right-2 h-3.5 w-3.5 transition-all opacity-100 text-primary" />}
         </span>
     );
 
