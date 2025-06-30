@@ -17,7 +17,7 @@ export function LanguageProgressBar({ progress, url, imageUrl, dataAiHint, child
     const filledBlocks = Math.ceil((progress / 100) * totalBlocks);
 
     const bar = (
-        <span className="absolute bottom-[-2px] left-0 w-full h-1 flex gap-0.5" aria-hidden="true">
+        <span className="absolute bottom-0 left-0 w-full h-1 flex gap-0.5" aria-hidden="true">
             {Array.from({ length: totalBlocks }).map((_, i) => (
                 <span
                     key={i}
@@ -35,7 +35,7 @@ export function LanguageProgressBar({ progress, url, imageUrl, dataAiHint, child
         <span className="relative pb-1.5 px-1 group">
             {children}
             {bar}
-            {(url || imageUrl) && <ExternalLink className="absolute -top-0.5 -right-2 h-3.5 w-3.5 transition-all opacity-100 text-primary" />}
+            {(url || imageUrl) && <ExternalLink className="absolute -top-0.5 -right-2 h-3.5 w-3.5 transition-all text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:text-primary" />}
         </span>
     );
 
@@ -45,7 +45,7 @@ export function LanguageProgressBar({ progress, url, imageUrl, dataAiHint, child
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block transition-colors hover:text-primary decoration-transparent"
+                className="inline-block transition-colors hover:text-primary underline"
                 title="View Certificate"
             >
                 {content}
@@ -58,7 +58,7 @@ export function LanguageProgressBar({ progress, url, imageUrl, dataAiHint, child
             <Dialog>
                 <DialogTrigger asChild>
                     <span
-                        className="inline-block transition-colors hover:text-primary decoration-transparent cursor-pointer"
+                        className="inline-block transition-colors hover:text-primary cursor-pointer underline"
                         title="View Image"
                     >
                         {content}
