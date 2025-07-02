@@ -59,7 +59,7 @@ const projects: Project[] = [
   {
     title: "Anicana Web3 Platform",
     description: "Developed the frontend for a decentralized platform for games, integrating with blockchain technologies.",
-    techStack: ["React.js", "TypeScript", "web3.js", "PHP", "Laravel"],
+    techStack: ["React.js", "TypeScript", "web3auth", "PHP", "Laravel"],
     images: [anicana],
     link: "https://anicana.org/",
     dataAiHint: "Loftal",
