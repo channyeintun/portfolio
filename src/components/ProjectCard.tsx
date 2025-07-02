@@ -45,8 +45,8 @@ export default function ProjectCard({ title, description, techStack, images, lin
             </CarouselContent>
             {images.length > 1 && (
               <>
-                <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-background/50 hover:bg-background/80" />
-                <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-background/50 hover:bg-background/80" />
+                <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 disabled:opacity-0 opacity-100 transition-opacity bg-background/50 hover:bg-background/80" />
+                <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 disabled:opacity-0 opacity-100 transition-opacity bg-background/50 hover:bg-background/80" />
               </>
             )}
           </Carousel>

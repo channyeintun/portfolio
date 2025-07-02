@@ -17,8 +17,8 @@ import ellsa from "@/assets/ellsa-ai.webp";
 import live2dcubism from "@/assets/live2d-cubism-ai.webp";
 import fbdl from "@/assets/fbdl.webp";
 import offlinelearning from "@/assets/offline-learn.webp";
-import cli from "@/assets/cli.webp";
 import qr from "@/assets/qr.webp";
+import spwrite from "@/assets/spwrite.webp";
 
 const projects: Project[] = [
    {
@@ -42,7 +42,7 @@ const projects: Project[] = [
     title: "SarPhat Publishing Platform",
     description: "A comprehensive digital publishing solution for authors and publishers in Myanmar",
     techStack: ["React.js", "Next.js", "JavaScript", "Shadcn-UI", "XState", "Java", "Spring Boot", "MySQL"],
-    images: [sarphat],
+    images: [sarphat, spwrite],
     link: "https://sarphat.com/",
     dataAiHint: "online publishing",
     company: "SarPhat",
