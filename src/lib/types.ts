@@ -6,6 +6,8 @@ export interface Project {
   link: string;
   dataAiHint: string;
   company?: string;
+  designerName?: string;
+  designerUrl?: string;
 }
 
 export interface Role {

@@ -4,11 +4,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Button } from "./ui/button";
 import type { Project } from "@/lib/types";
-import { ArrowUpRight, Briefcase } from "lucide-react";
+import { ArrowUpRight, Briefcase, Paintbrush } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import { Separator } from "./ui/separator";
 
-export default function ProjectCard({ title, description, techStack, images, link, dataAiHint, company }: Project) {
+export default function ProjectCard({ title, description, techStack, images, link, dataAiHint, company, designerName, designerUrl }: Project) {
   const isYoutubeVideo = link.includes("youtube.com/watch");
   const videoId = isYoutubeVideo ? new URL(link).searchParams.get('v') : null;
 
@@ -62,7 +62,19 @@ export default function ProjectCard({ title, description, techStack, images, lin
               <span>{company}</span>
             </Badge>
           )}
-          {company && techStack.length > 0 && <Separator orientation="vertical" className="h-4" />}
+          {designerName && (
+            <Badge variant="outline" className="flex items-center gap-1.5 py-1 px-2.5">
+              <Paintbrush className="h-4 w-4" />
+              {designerUrl ? (
+                <Link href={designerUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  <span>UI/UX by {designerName}</span>
+                </Link>
+              ) : (
+                <span>UI/UX by {designerName}</span>
+              )}
+            </Badge>
+          )}
+          {(company || designerName) && techStack.length > 0 && <Separator orientation="vertical" className="h-4" />}
           {techStack.map((tech) => (
             <Badge key={tech} variant="secondary">{tech}</Badge>
           ))}

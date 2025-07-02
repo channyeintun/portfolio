@@ -20,8 +20,13 @@ import offlinelearning from "@/assets/offline-learn.webp";
 import qr from "@/assets/qr.webp";
 import spwrite from "@/assets/spwrite.webp";
 
+const designer = {
+  designerName: "Novem Pai",
+  designerUrl: "https://dribbble.com/novempai/",
+}
+
 const projects: Project[] = [
-   {
+  {
     title: "Resolve Git Conflicts Easily with Github Desktop [Burmese]",
     description: "A tutorial video explaining how to resolve Git conflicts using the GitHub Desktop application, presented in Burmese.",
     techStack: ["Git", "GitHub Desktop"],
@@ -46,6 +51,7 @@ const projects: Project[] = [
     link: "https://sarphat.com/",
     dataAiHint: "online publishing",
     company: "SarPhat",
+    ...designer
   },
   {
     title: "MEEC Website",
@@ -54,7 +60,8 @@ const projects: Project[] = [
     images: [meec, strapi_meec],
     link: "https://meec-web.vercel.app/en",
     dataAiHint: "website development",
-    company: "MEEC"
+    company: "MEEC",
+    ...designer
   },
   {
     title: "Anicana Web3 Platform",
@@ -100,6 +107,7 @@ const projects: Project[] = [
     link: "https://digitalbase.com.mm/enterprise",
     dataAiHint: "POS and Backoffice Management System",
     company: "Nexcode",
+    ...designer
   },
   {
     title: "Code2 E-Learning Platform",
@@ -109,8 +117,9 @@ const projects: Project[] = [
     link: "https://code2learning.com/",
     dataAiHint: "E-Learning Platform",
     company: "Nexcode",
+    ...designer
   },
-   {
+  {
     title: "ELLA Translation AI",
     description: "Developed the frontend for an AI-powered translation platform, enabling real-time language translation and transcription.",
     techStack: ["React.js", "Live2D Cubism", "OpenAI", "Google Speech Recognition", "Azure AI Speech", "PHP", "Laravel"],
@@ -135,7 +144,7 @@ const projects: Project[] = [
     link: "https://github.com/channyeintun/offline-learning-platform",
     dataAiHint: "offline learning app",
   },
-   {
+  {
     title: "Implemented Rounded Shape for QR Code",
     description: "Contributed to the QR Code library to implement rounded shapes for QR codes, enhancing visual appeal.",
     techStack: ["JavaScript", "QR"],
