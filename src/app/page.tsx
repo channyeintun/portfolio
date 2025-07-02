@@ -29,7 +29,7 @@ export default function Home() {
               <Link href="/projects">View My Work</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="https://channyeintun.gitbook.io/" target="_blank" rel="noopener noreferrer">
+              <Link href="/blog">
                 Read My Blog
                 <BookOpen className="ml-2" />
               </Link>

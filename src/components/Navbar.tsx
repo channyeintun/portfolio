@@ -11,7 +11,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
-  { href: 'https://channyeintun.gitbook.io/', label: 'Blog' },
+  { href: '/blog', label: 'Blog' },
 ];
 
 export function Navbar() {
