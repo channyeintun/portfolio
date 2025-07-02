@@ -121,7 +121,7 @@ const projects: Project[] = [
   },
   {
     title: "HD Facebook Video Downloader",
-    description: "FFMPEG powered app for downloading Facebook videos in high definition.",
+    description: "An FFMPEG-powered app for downloading Facebook videos in high definition.",
     techStack: ["Next.js", "JavaScript", "ffmpeg"],
     images: [fbdl],
     link: "https://save-fb-video.vercel.app/",
