@@ -97,6 +97,13 @@ const certifications = [
     url: "https://scrimba.com/certificate-cert2uNje7fsAJCcDBPuQHx4PB877WbvpwBXLnv",
     icon: Award,
   },
+  {
+    name: "Complete Microservices with Go",
+    issuer: "SelfMadeEngineer.com",
+    date: "July 21, 2025",
+    url: "https://www.udemy.com/certificate/UC-53eb98e1-1e6a-431c-b2ac-f3410be88535/",
+    icon: Award,
+  }
 ];
 
 const readingList = [
