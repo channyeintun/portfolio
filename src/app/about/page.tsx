@@ -11,6 +11,7 @@ import { RubiksCube } from "@/components/RubiksCube";
 import avatar from "@/assets/avatar.webp";
 import { LanguageProgressBar } from "@/components/LanguageProgressBar";
 import duolingo from "@/assets/duolingo.webp";
+import burmaTheLongestWar from "@/assets/burma-the-longest-war.webp";
 
 const skills = [
   "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)",
@@ -107,6 +108,12 @@ const certifications = [
 ];
 
 const readingList = [
+  {
+    title: "Burma The Longest War",
+    author: "Louis Allen",
+    image: burmaTheLongestWar,
+    dataAiHint: "book cover"
+  },
   {
     title: "Thinking, Fast and Slow",
     author: "Daniel Kahneman",
