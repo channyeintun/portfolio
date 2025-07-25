@@ -19,7 +19,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  
+
   const mobileNavLinks = [...navLinks, { href: '/contact', label: 'Contact' }];
 
   return (
@@ -27,7 +27,7 @@ export function Navbar() {
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
           <Code className="h-8 w-8 text-primary" />
-          <span className="text-xl font-bold font-headline">FrontendFolio</span>
+          <span className="text-xl font-bold font-headline">ChanNyeinTun</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map(({ href, label }) => {
@@ -58,8 +58,8 @@ export function Navbar() {
               </Link>
             );
           })}
-          <Button asChild size="sm">
-             <Link href="/contact">Contact</Link>
+          <Button asChild size="sm" className="rounded-md bg-gradient-to-b from-white/10 bg-red-500 px-4 py-1 text-gray-100 relative shadow-inner shadow-gray-900/20 motion-safe:transition active:scale-98 h-9 grid place-items-center after:content-[''] after:absolute after:inset-0 after:rounded-md after:bg-gradient-to-b after:from-white/40 after:to-white/10 after:opacity-70 hover:after:opacity-100 after:motion-safe:transition">
+            <Link href="/contact"><span className='text-shadow-lg/20 [text-shadow:0_1px_1px_#991b1b]'>Contact</span></Link>
           </Button>
         </nav>
         <Button onClick={toggleMenu} variant="ghost" size="icon" className="md:hidden">

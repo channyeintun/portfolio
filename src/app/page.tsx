@@ -9,24 +9,22 @@ export default function Home() {
         <div className="absolute top-0 left-0 h-full w-full"></div>
         <div className="container z-10 mx-auto flex max-w-5xl flex-col items-center justify-center gap-6 px-4 text-center">
           <div className="space-y-4">
+            <p>Hi! I'm a</p>
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl font-headline">
-              Chan Nyein Tun
+              <span className="text-primary">Frontend</span> Developer
             </h1>
-            <p className="text-2xl font-medium text-primary/80 dark:text-primary-foreground/80 md:text-3xl font-headline">
-              Frontend Developer
-            </p>
           </div>
           <div className="max-w-2xl">
-            <p className="text-primary mb-6 text-lg italic md:text-xl">
-              &ldquo;Welcome! I&apos;m glad you&apos;re here. Take a look around and discover what I have to offer.&rdquo;
+            <p className="mb-6 text-lg md:text-xl">
+              I&apos;m glad you&apos;re here. Take a look around and discover what I have to offer.
             </p>
             <p className="text-muted-foreground md:text-lg">
-              Experienced software engineer with 5 years specializing in React.js and Next.js. Passionate about building modern, responsive, and user-friendly web applications.
+              I'm an experienced software engineer with 5 years specializing in React.js and Next.js. Passionate about building modern, responsive, and user-friendly web applications.
             </p>
           </div>
           <div className="flex flex-col gap-4 min-[400px]:flex-row justify-center flex-wrap">
-            <Button asChild size="lg">
-              <Link href="/projects">View My Work</Link>
+            <Button asChild size="lg" className="rounded-md bg-gradient-to-b from-white/10 bg-red-500 text-gray-100 relative shadow-inner shadow-gray-900/20 motion-safe:transition active:scale-98 grid place-items-center after:content-[''] after:absolute after:inset-0 after:rounded-md after:bg-gradient-to-b after:from-white/40 after:to-white/10 after:opacity-70 hover:after:opacity-100 after:motion-safe:transition">
+              <Link href="/projects"><span className='text-shadow-lg/20 [text-shadow:0_1px_1px_#991b1b]'>View My Work</span></Link>
             </Button>
             <Button asChild size="lg" variant="outline">
               <Link href="/blog">
