@@ -5,7 +5,6 @@ import { Award, Calendar, GraduationCap, MapPin, Home, Globe } from "lucide-reac
 import Image from "next/image";
 import Link from "next/link";
 import thinkfs from "@/assets/think-fs.webp";
-import si from "@/assets/si.webp";
 import eq from "@/assets/eq.webp";
 import { RubiksCube } from "@/components/RubiksCube";
 import avatar from "@/assets/avatar.webp";
