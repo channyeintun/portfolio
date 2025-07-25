@@ -121,12 +121,6 @@ const readingList = [
     dataAiHint: "book cover"
   },
   {
-    title: "Surrounded by Idiots",
-    author: "Thomas Erikson",
-    image: si,
-    dataAiHint: "book cover"
-  },
-  {
     title: "Emotional Intelligence",
     author: "Daniel Goleman",
     image: eq,
