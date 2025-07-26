@@ -145,10 +145,10 @@ export default function AboutPage() {
         </div>
         <div className="md:col-span-2 space-y-4">
           <h1 className="text-4xl font-bold font-headline text-center md:text-left">About Me</h1>
-          <p className="text-lg text-muted-foreground text-center md:text-left">
+          <p className="text-lg text-muted-foreground text-center md:text-left font-thin">
             I'm Chan Nyein Tun. I love crafting elegant code and am always excited to learn something new. Outside of the digital world, I'm an avid swimmer 🏊‍♂️, a keen reader 📚, and enjoy playing the guitar 🎸—hobbies that fuel both my creativity and my approach to problem-solving.
           </p>
-          <p className="text-lg text-muted-foreground text-center md:text-left">
+          <p className="text-lg text-muted-foreground text-center md:text-left font-thin">
             I speak <LanguageProgressBar progress={100}>Burmese</LanguageProgressBar>, <LanguageProgressBar progress={80} url="https://cert.efset.org/18iJ7X">English</LanguageProgressBar>, and a bit of <LanguageProgressBar progress={15} imageUrl={duolingo} dataAiHint="duolingo progress">German</LanguageProgressBar>.
           </p>
         </div>
@@ -172,8 +172,8 @@ export default function AboutPage() {
             <p className="text-lg text-foreground mb-6">
               I firmly believe that the foundation of any successful team and project is built on open communication and a positive, collaborative attitude. Technical skills are crucial, but it's the ability to share ideas clearly, listen actively, and support teammates that transforms a group of individuals into a high-performing unit.
             </p>
-            <blockquote className="border-l-4 border-primary pl-6 italic text-muted-foreground relative">
-              <p className="mb-2 text-lg">"The single biggest problem in communication is the illusion that it has taken place."</p>
+            <blockquote className="border-l-4 border-primary pl-6 text-muted-foreground relative">
+              <p className="mb-2 text-lg font-thin">"The single biggest problem in communication is the illusion that it has taken place."</p>
               <footer className="text-sm not-italic text-primary/80">— George Bernard Shaw</footer>
             </blockquote>
           </CardContent>
@@ -225,7 +225,7 @@ export default function AboutPage() {
                           <div>
                             {role.title && <h3 className="text-xl font-headline font-semibold">{role.title}</h3>}
                             <p className="text-sm text-primary mt-1">{role.period}</p>
-                            <p className="text-muted-foreground mt-2">{role.description}</p>
+                            <p className="text-muted-foreground mt-2 font-thin">{role.description}</p>
                           </div>
                         </div>
                       ))}
@@ -292,7 +292,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center sm:text-left px-8 pb-8 sm:p-0">
               <h3 className="text-2xl font-headline font-semibold mb-4">A Hobby in Hand</h3>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground font-thin">
                 Beyond programming, I enjoy the mental challenge and dexterity of solving a Rubik's Cube. It's a great way to unwind and keep my problem-solving skills sharp. I use both the beginner's method for fun and the more advanced CFOP method.
               </p>
             </div>

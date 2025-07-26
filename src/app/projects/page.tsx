@@ -101,7 +101,7 @@ const projects: Project[] = [
   },
   {
     title: "NexRetail POS and Backoffice Management System",
-    description: "Built the whole NexRetail POS and Backoffice Management System",
+    description: "Built NexRetail POS and Backoffice Management System",
     techStack: ["React.js", "Java", "Spring Boot", "MySQL"],
     images: [nexretail],
     link: "https://digitalbase.com.mm/enterprise",

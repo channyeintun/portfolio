@@ -54,7 +54,7 @@ export default function ProjectCard({ title, description, techStack, images, lin
       </CardHeader>
       <CardContent className="flex-grow pt-6">
         <CardTitle className="text-2xl font-headline">{title}</CardTitle>
-        <CardDescription className="mt-2 text-base text-muted-foreground">{description}</CardDescription>
+        <CardDescription className="mt-2 text-base text-muted-foreground font-thin">{description}</CardDescription>
         <div className="mt-4 flex flex-wrap gap-2 items-center">
           {company && (
             <Badge variant="outline" className="flex items-center gap-1.5 py-1 px-2.5">
