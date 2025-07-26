@@ -159,7 +159,7 @@ export default function ProjectsPage() {
     <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold font-headline">My Projects</h1>
-        <p className="text-lg text-muted-foreground mt-2">A selection of my work. Links to be updated soon.</p>
+        <p className="text-lg text-muted-foreground mt-2">A selection of my work.</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
