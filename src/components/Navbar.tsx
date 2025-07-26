@@ -27,7 +27,6 @@ export function Navbar() {
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
           <Code className="h-8 w-8 text-primary" />
-          <span className="text-xl font-bold font-headline">ChanNyeinTun</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map(({ href, label }) => {
@@ -39,7 +38,7 @@ export function Navbar() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg font-medium transition-colors hover:text-primary text-foreground/60"
+                  className="text-base font-medium transition-colors hover:text-primary text-foreground/60"
                 >
                   {label}
                 </a>
@@ -50,7 +49,7 @@ export function Navbar() {
                 key={href}
                 href={href}
                 className={cn(
-                  'text-lg font-medium transition-colors hover:text-primary',
+                  'text-base font-medium transition-colors hover:text-primary',
                   pathname === href ? 'text-primary' : 'text-foreground/60'
                 )}
               >
@@ -59,7 +58,7 @@ export function Navbar() {
             );
           })}
           <Button asChild size="sm" className="rounded-md bg-gradient-to-b from-white/10 bg-red-500 px-4 py-1 text-gray-100 relative shadow-inner shadow-gray-900/20 motion-safe:transition active:scale-98 h-9 grid place-items-center after:content-[''] after:absolute after:inset-0 after:rounded-md after:bg-gradient-to-b after:from-white/40 after:to-white/10 after:opacity-70 hover:after:opacity-100 after:motion-safe:transition">
-            <Link href="/contact"><span className='text-shadow-lg/20 [text-shadow:0_1px_1px_#991b1b]'>Contact</span></Link>
+            <Link href="/contact"><span className='text-shadow-lg/20 [text-shadow:0_1px_1px_#991b1b] text-base'>Contact</span></Link>
           </Button>
         </nav>
         <Button onClick={toggleMenu} variant="ghost" size="icon" className="md:hidden">

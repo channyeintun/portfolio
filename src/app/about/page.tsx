@@ -146,7 +146,7 @@ export default function AboutPage() {
         <div className="md:col-span-2 space-y-4">
           <h1 className="text-4xl font-bold font-headline text-center md:text-left">About Me</h1>
           <p className="text-lg text-muted-foreground text-center md:text-left">
-            I'm a frontend developer who loves crafting elegant code and is always excited to learn something new. Outside of the digital world, I'm an avid swimmer 🏊‍♂️, a keen reader 📚, and enjoy playing the guitar 🎸—hobbies that fuel both my creativity and my approach to problem-solving.
+            I'm Chan Nyein Tun. I love crafting elegant code and am always excited to learn something new. Outside of the digital world, I'm an avid swimmer 🏊‍♂️, a keen reader 📚, and enjoy playing the guitar 🎸—hobbies that fuel both my creativity and my approach to problem-solving.
           </p>
           <p className="text-lg text-muted-foreground text-center md:text-left">
             I speak <LanguageProgressBar progress={100}>Burmese</LanguageProgressBar>, <LanguageProgressBar progress={80} url="https://cert.efset.org/18iJ7X">English</LanguageProgressBar>, and a bit of <LanguageProgressBar progress={15} imageUrl={duolingo} dataAiHint="duolingo progress">German</LanguageProgressBar>.
