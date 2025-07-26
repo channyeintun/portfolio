@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 const Sticker = ({ color }: { color: string }) => <div className={cn(color)} />;
@@ -25,67 +26,8 @@ const Face = ({
 );
 
 export function RubiksCube() {
-    const [rotation, setRotation] = useState({ rotateX: -30, rotateY: -45 });
+    const [rotation, setRotation] = useState({ x: -30, y: -45, z: 0 });
     const [isDragging, setIsDragging] = useState(false);
-    const [startPos, setStartPos] = useState({ x: 0, y: 0 });
-    const [startRotation, setStartRotation] = useState({ rotateX: -30, rotateY: -45 });
-    const cubeRef = useRef<HTMLDivElement>(null);
-    const animationFrameRef = useRef<number | null>(null);
-
-    useEffect(() => {
-        const handleMouseDown = (e: MouseEvent) => {
-            setIsDragging(true);
-            setStartPos({ x: e.clientX, y: e.clientY });
-            setStartRotation(rotation);
-        };
-
-        const handleMouseMove = (e: MouseEvent) => {
-            if (!isDragging) return;
-
-            const sensitivity = 0.5;
-            // Reverse the direction for intuitive dragging:
-            // - Drag right -> positive rotateY (cube rotates right)
-            // - Drag down -> negative rotateX (cube rotates down)
-            const deltaX = (e.clientX - startPos.x) * sensitivity;
-            const deltaY = (e.clientY - startPos.y) * sensitivity;
-            const newRotation = {
-                rotateX: startRotation.rotateX - deltaY, // Downward drag decreases rotateX
-                rotateY: startRotation.rotateY + deltaX, // Rightward drag increases rotateY
-            };
-
-            if (animationFrameRef.current) {
-                cancelAnimationFrame(animationFrameRef.current);
-            }
-            animationFrameRef.current = requestAnimationFrame(() => {
-                setRotation(newRotation);
-            });
-        };
-
-        const handleMouseUp = () => {
-            setIsDragging(false);
-            if (animationFrameRef.current) {
-                cancelAnimationFrame(animationFrameRef.current);
-            }
-        };
-
-        const cubeElement = cubeRef.current;
-        if (cubeElement) {
-            cubeElement.addEventListener('mousedown', handleMouseDown);
-            window.addEventListener('mousemove', handleMouseMove);
-            window.addEventListener('mouseup', handleMouseUp);
-        }
-
-        return () => {
-            if (cubeElement) {
-                cubeElement.removeEventListener('mousedown', handleMouseDown);
-                window.removeEventListener('mousemove', handleMouseMove);
-                window.removeEventListener('mouseup', handleMouseUp);
-            }
-            if (animationFrameRef.current) {
-                cancelAnimationFrame(animationFrameRef.current);
-            }
-        };
-    }, [isDragging, startPos, startRotation]);
 
     const faceColors = {
         up: 'bg-[#FFFFFF]',
@@ -98,21 +40,39 @@ export function RubiksCube() {
 
     const faceStickers = (face: keyof typeof faceColors) => Array(9).fill(faceColors[face]);
 
+    const handleDrag = (_event: MouseEvent | TouchEvent | PointerEvent, info: { delta: { x: number; y: number } }) => {
+        const sensitivity = 0.3; // Reduced sensitivity for smoother control
+        // Map drag deltas to rotation angles
+        // Dragging right -> positive Y rotation, dragging down -> negative X rotation
+        setRotation((prev) => ({
+            x: prev.x - info.delta.y * sensitivity,
+            y: prev.y + info.delta.x * sensitivity,
+            z: prev.z, // No Z rotation for simplicity
+        }));
+    };
+
     return (
-        <div
+        <motion.div
             className={cn(
-                "perspective",
-                "cursor-pointer",
-                { "select-none": isDragging }
+                'perspective cursor-pointer',
+                { 'select-none': isDragging }
             )}
             style={{ width: '150px', height: '150px' }}
-            ref={cubeRef}
+            onDragStart={() => setIsDragging(true)}
+            onDragEnd={() => setIsDragging(false)}
         >
-            <div
-                className="relative h-full w-full transform-style-3d transition-transform duration-[16ms] ease-linear"
+            <motion.div
+                className="relative h-full w-full transform-style-3d"
                 style={{
-                    transform: `rotateX(${rotation.rotateX}deg) rotateY(${rotation.rotateY}deg)`,
+                    rotateX: rotation.x,
+                    rotateY: rotation.y,
+                    rotateZ: rotation.z,
                 }}
+                drag
+                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} // Prevent any positional movement
+                dragElastic={0} // Disable elastic dragging to keep cube fixed
+                onDrag={handleDrag}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }} // Smooth spring animation
             >
                 <Face
                     transform="rotateY(0deg) translateZ(75px)"
@@ -138,7 +98,7 @@ export function RubiksCube() {
                     transform="rotateY(-90deg) translateZ(75px)"
                     colors={faceStickers('left')}
                 />
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }
