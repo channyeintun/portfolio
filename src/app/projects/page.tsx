@@ -36,7 +36,7 @@ const projects: Project[] = [
   },
   {
     title: "Channel.org",
-    description: "Built a new frontend for a distributed social media platform, a fork of Mastodon, enhancing user experience and performance.",
+    description: "A distributed social media platform, a fork of Mastodon, enhancing user experience and performance.",
     techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query", "Ruby on Rails", "PostgreSQL", "Shadcn/UI"],
     images: [home_channel, web_channel, public_channel, dashboard_channel],
     link: "https://home.channel.org/",
@@ -65,7 +65,7 @@ const projects: Project[] = [
   },
   {
     title: "Anicana Web3 Platform",
-    description: "Developed the frontend for a decentralized platform for games, integrating with blockchain technologies.",
+    description: "A decentralized platform for games, integrating with blockchain technologies.",
     techStack: ["React.js", "TypeScript", "web3auth", "PHP", "Laravel"],
     images: [anicana],
     link: "https://anicana.org/",
@@ -74,7 +74,7 @@ const projects: Project[] = [
   },
   {
     title: "Sheng Siong Supplier Portal",
-    description: "Built new features for the Sheng Siong supplier portal including microservices and a data analytics dashboard.",
+    description: "A supplier portal including microservices and a data analytics dashboard.",
     techStack: ["Next.js", "Strapi.js", "Node.js", "Express"],
     images: [sssp],
     link: "https://shengsiong.com.sg/",
@@ -83,7 +83,7 @@ const projects: Project[] = [
   },
   {
     title: "Invoice and Quotation",
-    description: "Built new features for the Invoice & Quotation platform",
+    description: "Invoice & Quotation platform",
     techStack: ["Next.js", "Strapi.js", "GraphQL"],
     images: [invoiceapp],
     link: "https://mystock.onlineinvoices.com/",
@@ -92,7 +92,7 @@ const projects: Project[] = [
   },
   {
     title: "Nex App HR Management System",
-    description: "Developed a mobile application for the Nex App HR Management System, a comprehensive solution for managing human resources.",
+    description: "A mobile application for the Nex App HR Management System, a comprehensive solution for managing human resources.",
     techStack: ["Next.js", "Strapi.js", "React Native", "GraphQL", "Pdf.js", "Puppeteer"],
     images: [hr],
     link: "#",
@@ -101,7 +101,7 @@ const projects: Project[] = [
   },
   {
     title: "NexRetail POS and Backoffice Management System",
-    description: "Built NexRetail POS and Backoffice Management System",
+    description: "POS and Backoffice Management System",
     techStack: ["React.js", "Java", "Spring Boot", "MySQL"],
     images: [nexretail],
     link: "https://digitalbase.com.mm/enterprise",
@@ -111,7 +111,7 @@ const projects: Project[] = [
   },
   {
     title: "Code2 E-Learning Platform",
-    description: "Developed a comprehensive e-learning platform with features for online courses",
+    description: "A comprehensive e-learning platform with features for online courses",
     techStack: ["React.js", "Java", "Spring Boot", "MySQL"],
     images: [code2],
     link: "https://code2learning.com/",
@@ -121,7 +121,7 @@ const projects: Project[] = [
   },
   {
     title: "ELLA Translation AI",
-    description: "Developed the frontend for an AI-powered translation platform, enabling real-time language translation and transcription.",
+    description: "An AI-powered translation platform, enabling real-time language translation and transcription.",
     techStack: ["React.js", "Live2D Cubism", "OpenAI", "Google Speech Recognition", "Azure AI Speech", "PHP", "Laravel"],
     images: [ellsa, live2dcubism],
     link: "https://translate-dev.loftal.jp/",
