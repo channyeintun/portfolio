@@ -26,53 +26,55 @@ export function Navbar() {
   return (
     <>
       <header className="stuck-top">
-        <div className="container flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-            <Code className="h-8 w-8 text-primary" />
-          </Link>
-          <nav className="hidden items-center gap-6 md:flex">
-            {navLinks.map(({ href, label }) => {
-              const isExternal = href.startsWith('http');
-              if (isExternal) {
+        <div className='wrapper'>
+          <div className="container flex h-20 items-center justify-between">
+            <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+              <Code className="h-8 w-8 text-primary" />
+            </Link>
+            <nav className="hidden items-center gap-6 md:flex">
+              {navLinks.map(({ href, label }) => {
+                const isExternal = href.startsWith('http');
+                if (isExternal) {
+                  return (
+                    <a
+                      key={href}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-base font-medium transition-colors hover:text-primary text-foreground/60"
+                    >
+                      {label}
+                    </a>
+                  );
+                }
                 return (
-                  <a
+                  <Link
                     key={href}
                     href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-base font-medium transition-colors hover:text-primary text-foreground/60"
+                    className={cn(
+                      'text-base font-medium transition-colors hover:text-primary',
+                      pathname === href ? 'text-primary' : 'text-foreground/60'
+                    )}
                   >
                     {label}
-                  </a>
+                  </Link>
                 );
-              }
-              return (
-                <Link
-                  key={href}
-                  href={href}
-                  className={cn(
-                    'text-base font-medium transition-colors hover:text-primary',
-                    pathname === href ? 'text-primary' : 'text-foreground/60'
-                  )}
-                >
-                  {label}
+              })}
+              <Button
+                asChild
+                size="sm"
+                className="rounded-md bg-gradient-to-b from-white/10 bg-red-500 px-4 py-1 text-gray-100 relative shadow-inner shadow-gray-900/20 motion-safe:transition active:scale-98 h-9 grid place-items-center after:content-[''] after:absolute after:inset-0 after:rounded-md after:bg-gradient-to-b after:from-white/40 after:to-white/10 after:opacity-70 hover:after:opacity-100 after:motion-safe:transition"
+              >
+                <Link href="/contact">
+                  <span className="text-shadow-lg/20 [text-shadow:0_1px_1px_#991b1b] text-base">Contact</span>
                 </Link>
-              );
-            })}
-            <Button
-              asChild
-              size="sm"
-              className="rounded-md bg-gradient-to-b from-white/10 bg-red-500 px-4 py-1 text-gray-100 relative shadow-inner shadow-gray-900/20 motion-safe:transition active:scale-98 h-9 grid place-items-center after:content-[''] after:absolute after:inset-0 after:rounded-md after:bg-gradient-to-b after:from-white/40 after:to-white/10 after:opacity-70 hover:after:opacity-100 after:motion-safe:transition"
-            >
-              <Link href="/contact">
-                <span className="text-shadow-lg/20 [text-shadow:0_1px_1px_#991b1b] text-base">Contact</span>
-              </Link>
+              </Button>
+            </nav>
+            <Button onClick={toggleMenu} variant="ghost" size="icon" className="md:hidden">
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <span className="sr-only">Toggle menu</span>
             </Button>
-          </nav>
-          <Button onClick={toggleMenu} variant="ghost" size="icon" className="md:hidden">
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            <span className="sr-only">Toggle menu</span>
-          </Button>
+          </div>
         </div>
         {isOpen && (
           <div className="md:hidden">
@@ -122,19 +124,21 @@ export function Navbar() {
           background: transparent;
 
           @supports (container-type: scroll-state) {
-            .container {
+            .wrapper {
                 @container scroll-state(stuck: top) {
                   background: hsl(var(--background) / 0.95);
                   backdrop-filter: blur(10px);
+                  border-bottom: 1px solid hsl(var(--border) / 0.4);
               }
             }
           }
 
           /* Fallback for browsers that don't support scroll-state */
           @supports not (container-type: scroll-state) {
-            .stuck-top > .container {
+            .stuck-top > .wrapper {
               background: hsl(var(--background) / 0.95);
               backdrop-filter: blur(10px);
+              border-bottom: 1px solid hsl(var(--border) / 0.4);
             }
           }
       `}</style>
