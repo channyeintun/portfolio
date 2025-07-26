@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth">
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased bg-grid-pattern',
+          'min-h-screen bg-background font-sans bg-grid-pattern',
           inter.variable,
           dmSerifText.variable
         )}
