@@ -1,3 +1,4 @@
+import { Test } from '@/components/Test';
 import { Button } from '@/components/ui/button';
 import { BookOpen, Github, Linkedin } from 'lucide-react';
 import Link from 'next/link';
@@ -5,10 +6,11 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <Test />
       <section className="relative flex min-h-[calc(100vh-5rem)] w-full items-center justify-center overflow-hidden">
         <div className="container z-10 mx-auto flex max-w-2xl flex-col items-start justify-center gap-6">
           <div className="space-y-4">
-            <p className="max-sm:mt-8 text-sm font-extralight" style={{
+            <p className="max-sm:mt-5 text-sm font-extralight" style={{
               color: "oklch(0.928 0.006 264.531)"
             }}>Hi! I'm a</p>
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl font-headline whitespace-nowrap">
@@ -42,7 +44,7 @@ export default function Home() {
               <Link href="/contact">Get In Touch</Link>
             </Button>
           </div>
-          <div className="mt-6 flex items-center gap-6 max-sm:mb-6">
+          <div className="mt-6 flex items-center gap-6 max-sm:mb-5">
             <Link
               href="https://github.com/channyeintun"
               aria-label="GitHub profile"
