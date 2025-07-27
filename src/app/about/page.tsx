@@ -11,6 +11,7 @@ import avatar from "@/assets/avatar.webp";
 import { LanguageProgressBar } from "@/components/LanguageProgressBar";
 import duolingo from "@/assets/duolingo.webp";
 import burmaTheLongestWar from "@/assets/burma-the-longest-war.webp";
+import ScrollProgress from "@/components/ScrollProgressIndicator";
 
 const skills = [
   "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)",
@@ -131,6 +132,7 @@ const readingList = [
 export default function AboutPage() {
   return (
     <div className="container mx-auto max-w-5xl py-12 px-4 sm:px-6 lg:px-8">
+      <ScrollProgress />
       <section className="grid md:grid-cols-3 gap-8 md:gap-12 items-center">
         <div className="md:col-span-1 flex justify-center md:justify-start">
           <Image
