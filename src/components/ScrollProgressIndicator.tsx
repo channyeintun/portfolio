@@ -1,5 +1,5 @@
 'use client';
-import horse from '@/assets/horse.jpeg';
+import horse from '@/assets/horse.webp';
 import { useEffect, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
