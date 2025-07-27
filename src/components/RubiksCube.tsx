@@ -41,10 +41,10 @@ export function RubiksCube() {
     const faceStickers = (face: keyof typeof faceColors) => Array(9).fill(faceColors[face]);
 
     const handleDrag = (_event: MouseEvent | TouchEvent | PointerEvent, info: { delta: { x: number; y: number } }) => {
-        const sensitivity = 0.4; // Adjusted for mobile responsiveness
+        const sensitivity = 0.4; // Consistent sensitivity for desktop and mobile
         setRotation((prev) => ({
-            x: prev.x - info.delta.y * sensitivity,
-            y: prev.y + info.delta.x * sensitivity,
+            x: prev.x - info.delta.y * sensitivity, // Drag down -> negative X rotation
+            y: prev.y + info.delta.x * sensitivity, // Drag right -> positive Y rotation
             z: prev.z,
         }));
     };
@@ -55,10 +55,11 @@ export function RubiksCube() {
                 'perspective cursor-pointer',
                 { 'select-none': isDragging }
             )}
-            style={{ 
-                width: '150px', 
+            style={{
+                width: '150px',
                 height: '150px',
-                touchAction: 'none' // Prevent default touch behaviors like scrolling
+                touchAction: 'none', // Prevent default touch/scroll behaviors
+                position: 'relative' // Ensure cube stays fixed in its container
             }}
             onDragStart={() => setIsDragging(true)}
             onDragEnd={() => setIsDragging(false)}
@@ -69,13 +70,17 @@ export function RubiksCube() {
                     rotateX: rotation.x,
                     rotateY: rotation.y,
                     rotateZ: rotation.z,
+                    position: 'absolute', // Fix cube to parent container
+                    top: 0,
+                    left: 0
                 }}
                 drag
-                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} // Keep cube fixed
-                dragElastic={0.1} // Slight elasticity for smoother touch feel
+                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} // No positional movement
+                dragElastic={0} // Disable elastic movement
+                dragMomentum={false} // Disable momentum after drag
                 dragPropagation={false} // Prevent scroll interference
                 onDrag={handleDrag}
-                transition={{ type: 'spring', stiffness: 400, damping: 25 }} // Tighter spring for mobile
+                transition={{ type: 'spring', stiffness: 400, damping: 25 }} // Smooth spring animation
             >
                 <Face
                     transform="rotateY(0deg) translateZ(75px)"
