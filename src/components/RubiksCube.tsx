@@ -49,6 +49,11 @@ export function RubiksCube() {
         }));
     };
 
+    // Prevent default touch behaviors to stop scrolling
+    const preventTouchDefault = (e: React.TouchEvent<HTMLDivElement>) => {
+        e.preventDefault();
+    };
+
     return (
         <motion.div
             className={cn(
@@ -58,11 +63,13 @@ export function RubiksCube() {
             style={{
                 width: '150px',
                 height: '150px',
-                touchAction: 'none', // Prevent default touch/scroll behaviors
-                position: 'relative' // Ensure cube stays fixed in its container
+                touchAction: 'none', // Prevent browser touch behaviors
+                position: 'relative'
             }}
             onDragStart={() => setIsDragging(true)}
             onDragEnd={() => setIsDragging(false)}
+            onTouchStart={preventTouchDefault}
+            onTouchMove={preventTouchDefault}
         >
             <motion.div
                 className="relative h-full w-full transform-style-3d"
@@ -70,9 +77,10 @@ export function RubiksCube() {
                     rotateX: rotation.x,
                     rotateY: rotation.y,
                     rotateZ: rotation.z,
-                    position: 'absolute', // Fix cube to parent container
+                    position: 'absolute',
                     top: 0,
-                    left: 0
+                    left: 0,
+                    touchAction: 'none' // Reinforce touch-action on inner div
                 }}
                 drag
                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} // No positional movement
