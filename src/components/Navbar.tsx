@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X, Code } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
@@ -22,10 +22,15 @@ export function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const mobileNavLinks = [...navLinks, { href: '/contact', label: 'Contact' }];
+  const [supported, setSupported] = useState(false);
+
+  useEffect(() => {
+    setSupported(window.CSS.supports('container-type: scroll-state'));
+  }, [])
 
   return (
     <>
-      <header className="stuck-top">
+      <header className={`stuck-top ${supported ? '' : 'sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'}`}>
         <div className='wrapper'>
           <div className="container flex h-20 items-center justify-between">
             <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
@@ -130,15 +135,6 @@ export function Navbar() {
                   backdrop-filter: blur(10px);
                   border-bottom: 1px solid hsl(var(--border) / 0.4);
               }
-            }
-          }
-
-          /* Fallback for browsers that don't support scroll-state */
-          @supports not (container-type: scroll-state) {
-            .stuck-top > .wrapper {
-              background: hsl(var(--background) / 0.95);
-              backdrop-filter: blur(10px);
-              border-bottom: 1px solid hsl(var(--border) / 0.4);
             }
           }
       `}</style>

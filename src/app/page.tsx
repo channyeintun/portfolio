@@ -1,4 +1,3 @@
-import { Test } from '@/components/Test';
 import { Button } from '@/components/ui/button';
 import { BookOpen, Github, Linkedin } from 'lucide-react';
 import Link from 'next/link';
@@ -6,7 +5,6 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <Test />
       <section className="relative flex min-h-[calc(100vh-5rem)] w-full items-center justify-center overflow-hidden">
         <div className="container z-10 mx-auto flex max-w-2xl flex-col items-start justify-center gap-6">
           <div className="space-y-4">
