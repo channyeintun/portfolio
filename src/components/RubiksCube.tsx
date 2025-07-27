@@ -41,13 +41,11 @@ export function RubiksCube() {
     const faceStickers = (face: keyof typeof faceColors) => Array(9).fill(faceColors[face]);
 
     const handleDrag = (_event: MouseEvent | TouchEvent | PointerEvent, info: { delta: { x: number; y: number } }) => {
-        const sensitivity = 0.3; // Reduced sensitivity for smoother control
-        // Map drag deltas to rotation angles
-        // Dragging right -> positive Y rotation, dragging down -> negative X rotation
+        const sensitivity = 0.4; // Adjusted for mobile responsiveness
         setRotation((prev) => ({
             x: prev.x - info.delta.y * sensitivity,
             y: prev.y + info.delta.x * sensitivity,
-            z: prev.z, // No Z rotation for simplicity
+            z: prev.z,
         }));
     };
 
@@ -57,7 +55,11 @@ export function RubiksCube() {
                 'perspective cursor-pointer',
                 { 'select-none': isDragging }
             )}
-            style={{ width: '150px', height: '150px' }}
+            style={{ 
+                width: '150px', 
+                height: '150px',
+                touchAction: 'none' // Prevent default touch behaviors like scrolling
+            }}
             onDragStart={() => setIsDragging(true)}
             onDragEnd={() => setIsDragging(false)}
         >
@@ -69,10 +71,11 @@ export function RubiksCube() {
                     rotateZ: rotation.z,
                 }}
                 drag
-                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} // Prevent any positional movement
-                dragElastic={0} // Disable elastic dragging to keep cube fixed
+                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} // Keep cube fixed
+                dragElastic={0.1} // Slight elasticity for smoother touch feel
+                dragPropagation={false} // Prevent scroll interference
                 onDrag={handleDrag}
-                transition={{ type: 'spring', stiffness: 300, damping: 20 }} // Smooth spring animation
+                transition={{ type: 'spring', stiffness: 400, damping: 25 }} // Tighter spring for mobile
             >
                 <Face
                     transform="rotateY(0deg) translateZ(75px)"
