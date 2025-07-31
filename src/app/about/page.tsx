@@ -12,6 +12,7 @@ import { LanguageProgressBar } from "@/components/LanguageProgressBar";
 import duolingo from "@/assets/duolingo.webp";
 import burmaTheLongestWar from "@/assets/burma-the-longest-war.webp";
 import ScrollProgress from "@/components/ScrollProgressIndicator";
+import { Spotlight } from "@/components/ui/spotlight";
 
 const skills = [
   "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)",
@@ -269,8 +270,12 @@ export default function AboutPage() {
         <h2 className="text-3xl font-bold font-headline text-center mb-8">Certifications</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {certifications.map((cert, index) => (
-            <Link key={index} href={cert.url} target="_blank" rel="noopener noreferrer" className="group block">
-              <Card className="h-full transition-colors duration-300 group-hover:border-primary">
+            <Link key={index} href={cert.url} target="_blank" rel="noopener noreferrer" className="group block relative rounded-lg p-[1px] dark:bg-zinc-600/30">
+              <Spotlight
+                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
+                size={130}
+              />
+              <Card className="relative h-full overflow-hidden bg-background border-0 z-10">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <cert.icon className="h-10 w-10 text-primary shrink-0" />
                   <div>

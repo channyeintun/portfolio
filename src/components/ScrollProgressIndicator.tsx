@@ -1,7 +1,7 @@
 'use client';
 import horse from '@/assets/horse.webp';
 import { useEffect, useState } from 'react';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants } from 'motion/react';
 import Image from 'next/image';
 
 const ScrollProgress: React.FC = () => {
