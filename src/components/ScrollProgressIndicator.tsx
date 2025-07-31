@@ -79,21 +79,21 @@ const ScrollProgress: React.FC = () => {
             transition: { duration: 0.3 },
         },
         runningForward: {
-            y: [-10, 0, -10],
-            rotate: [2, 0, -2],
+            y: [-5, 0, -5],
+            rotate: [1, 0, -1],
             opacity: 1,
             transition: {
-                y: { repeat: Infinity, duration: 0.5, ease: 'easeInOut' },
-                rotate: { repeat: Infinity, duration: 0.5, ease: 'easeInOut' },
+                y: { repeat: Infinity, duration: 1, ease: 'easeInOut' },
+                rotate: { repeat: Infinity, duration: 1, ease: 'easeOut' },
             },
         },
         runningBackward: {
-            y: [-10, 0, -10],
-            rotate: [-2, 0, 2],
+            y: [-5, 0, -5],
+            rotate: [-1, 0, 1],
             opacity: 1,
             transition: {
-                y: { repeat: Infinity, duration: 0.5, ease: 'easeInOut' },
-                rotate: { repeat: Infinity, duration: 0.5, ease: 'easeInOut' },
+                y: { repeat: Infinity, duration: 1, ease: 'easeInOut' },
+                rotate: { repeat: Infinity, duration: 1, ease: 'easeIn' },
             },
         },
         hidden: {
