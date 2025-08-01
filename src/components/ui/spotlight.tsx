@@ -30,7 +30,6 @@ export function Spotlight({
       if (parent) {
         parent.style.position = 'relative'
         parent.style.overflow = 'hidden'
-        parent.style.touchAction = 'auto' // Ensure touch events work properly
         setParentElement(parent)
       }
     }
@@ -55,7 +54,6 @@ export function Spotlight({
 
   const handleTouchMove = useCallback(
     (event: TouchEvent) => {
-      event.preventDefault() // Prevent scrolling while touching
       const touch = event.touches[0]
       updatePosition(touch.clientX, touch.clientY)
     },
@@ -76,7 +74,7 @@ export function Spotlight({
       const touch = event.touches[0]
       updatePosition(touch.clientX, touch.clientY)
     })
-    parentElement.addEventListener('touchmove', handleTouchMove, { passive: false })
+    parentElement.addEventListener('touchmove', handleTouchMove)
     parentElement.addEventListener('touchend', () => setIsActive(false))
     parentElement.addEventListener('touchcancel', () => setIsActive(false))
 
