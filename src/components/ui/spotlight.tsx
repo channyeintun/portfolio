@@ -15,7 +15,7 @@ export function Spotlight({
   springOptions = { bounce: 0 },
 }: SpotlightProps) {
   const containerRef = useRef<HTMLDivElement>(null)
-  const [isHovered, setIsHovered] = useState(false)
+  const [isActive, setIsActive] = useState(false)
   const [parentElement, setParentElement] = useState<HTMLElement | null>(null)
 
   const mouseX = useSpring(0, springOptions)
@@ -30,34 +30,69 @@ export function Spotlight({
       if (parent) {
         parent.style.position = 'relative'
         parent.style.overflow = 'hidden'
+        parent.style.touchAction = 'auto' // Ensure touch events work properly
         setParentElement(parent)
       }
     }
   }, [])
 
-  const handleMouseMove = useCallback(
-    (event: MouseEvent) => {
+  const updatePosition = useCallback(
+    (clientX: number, clientY: number) => {
       if (!parentElement) return
       const { left, top } = parentElement.getBoundingClientRect()
-      mouseX.set(event.clientX - left)
-      mouseY.set(event.clientY - top)
+      mouseX.set(clientX - left)
+      mouseY.set(clientY - top)
     },
-    [mouseX, mouseY, parentElement],
+    [mouseX, mouseY, parentElement]
+  )
+
+  const handleMouseMove = useCallback(
+    (event: MouseEvent) => {
+      updatePosition(event.clientX, event.clientY)
+    },
+    [updatePosition]
+  )
+
+  const handleTouchMove = useCallback(
+    (event: TouchEvent) => {
+      event.preventDefault() // Prevent scrolling while touching
+      const touch = event.touches[0]
+      updatePosition(touch.clientX, touch.clientY)
+    },
+    [updatePosition]
   )
 
   useEffect(() => {
     if (!parentElement) return
 
+    // Mouse events
     parentElement.addEventListener('mousemove', handleMouseMove)
-    parentElement.addEventListener('mouseenter', () => setIsHovered(true))
-    parentElement.addEventListener('mouseleave', () => setIsHovered(false))
+    parentElement.addEventListener('mouseenter', () => setIsActive(true))
+    parentElement.addEventListener('mouseleave', () => setIsActive(false))
+
+    // Touch events
+    parentElement.addEventListener('touchstart', (event) => {
+      setIsActive(true)
+      const touch = event.touches[0]
+      updatePosition(touch.clientX, touch.clientY)
+    })
+    parentElement.addEventListener('touchmove', handleTouchMove, { passive: false })
+    parentElement.addEventListener('touchend', () => setIsActive(false))
+    parentElement.addEventListener('touchcancel', () => setIsActive(false))
 
     return () => {
+      // Cleanup mouse events
       parentElement.removeEventListener('mousemove', handleMouseMove)
-      parentElement.removeEventListener('mouseenter', () => setIsHovered(true))
-      parentElement.removeEventListener('mouseleave', () => setIsHovered(false))
+      parentElement.removeEventListener('mouseenter', () => setIsActive(true))
+      parentElement.removeEventListener('mouseleave', () => setIsActive(false))
+
+      // Cleanup touch events
+      parentElement.removeEventListener('touchstart', () => setIsActive(true))
+      parentElement.removeEventListener('touchmove', handleTouchMove)
+      parentElement.removeEventListener('touchend', () => setIsActive(false))
+      parentElement.removeEventListener('touchcancel', () => setIsActive(false))
     }
-  }, [parentElement, handleMouseMove])
+  }, [parentElement, handleMouseMove, handleTouchMove])
 
   return (
     <motion.div
@@ -65,7 +100,7 @@ export function Spotlight({
       className={cn(
         'pointer-events-none absolute rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops),transparent_80%)] blur-xl transition-opacity duration-200',
         'from-zinc-50 via-zinc-100 to-zinc-200',
-        isHovered ? 'opacity-100' : 'opacity-0',
+        isActive ? 'opacity-100' : 'opacity-0',
         className,
       )}
       style={{
