@@ -32,7 +32,17 @@ const projects: Project[] = [
     techStack: ["Git", "GitHub Desktop"],
     images: [],
     link: "https://www.youtube.com/watch?v=fHCbK-F9-Q8",
+    videoUrl: "https://www.youtube.com/watch?v=fHCbK-F9-Q8",
     dataAiHint: "git conflict",
+  },
+  {
+    title: "use-scrimba",
+    description: "A powerful React hook that brings Scrimba-like functionality to your applications! Record and replay Monaco Editor interactions with perfect synchronization, creating interactive coding tutorials and screencasts.",
+    techStack: ["TypeScript", "React.js", "Monaco Editor"],
+    images: [],
+    link: "https://www.npmjs.com/package/use-scrimba",
+    videoUrl: "https://www.youtube.com/watch?v=_IcGhKsWN08",
+    dataAiHint: "Scrimba-like functionality",
   },
   {
     title: "Channel.org",

@@ -9,9 +9,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Separator } from "./ui/separator";
 import { Spotlight } from "./ui/spotlight";
 
-export default function ProjectCard({ title, description, techStack, images, link, dataAiHint, company, designerName, designerUrl }: Project) {
-  const isYoutubeVideo = link.includes("youtube.com/watch");
-  const videoId = isYoutubeVideo ? new URL(link).searchParams.get('v') : null;
+export default function ProjectCard({ title, description, techStack, images, link, videoUrl, dataAiHint, company, designerName, designerUrl }: Project) {
+  const isYoutubeVideo = videoUrl && videoUrl.includes("youtube.com/watch");
+  const videoId = isYoutubeVideo ? new URL(videoUrl).searchParams.get('v') : null;
 
   return (
     <div className="relative dark:bg-zinc-600/30 overflow-hidden p-[1px] rounded-lg flex">
@@ -89,7 +89,7 @@ export default function ProjectCard({ title, description, techStack, images, lin
         <CardFooter>
           <Button asChild className="w-full" variant="outline" disabled={link === "#"}>
             <Link href={link} target="_blank" rel="noopener noreferrer">
-              {link === "#" ? "Link Coming Soon" : (isYoutubeVideo ? "Watch on YouTube" : "View Project")}
+              {link === "#" ? "Link Coming Soon" : (link.includes("youtube.com/watch") ? "Watch on YouTube" : "View Project")}
               {link !== "#" && <ArrowUpRight className="ml-2 h-4 w-4" />}
             </Link>
           </Button>

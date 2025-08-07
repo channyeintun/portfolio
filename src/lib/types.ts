@@ -4,6 +4,7 @@ export interface Project {
   techStack: string[];
   images: string[] | any[];
   link: string;
+  videoUrl?: string;
   dataAiHint: string;
   company?: string;
   designerName?: string;
