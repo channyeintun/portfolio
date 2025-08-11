@@ -14,12 +14,12 @@ export default function ProjectCard({ title, description, techStack, images, lin
   const videoId = isYoutubeVideo ? new URL(videoUrl).searchParams.get('v') : null;
 
   return (
-    <div className="relative dark:bg-zinc-600/30 overflow-hidden p-[1px] rounded-lg flex">
+    <div className="relative dark:bg-zinc-600/30 overflow-hidden p-[1px] rounded-lg flex w-full h-full">
       <Spotlight
         className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
         size={300}
       />
-      <Card className="flex flex-col overflow-hidden bg-background border-0 relative z-10">
+      <Card className="flex flex-col overflow-hidden bg-background border-0 relative z-10 w-full h-full">
         <CardHeader className="p-0">
           {isYoutubeVideo && videoId ? (
             <div className="aspect-video relative">
