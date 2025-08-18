@@ -8,6 +8,7 @@ import thinkfs from "@/assets/think-fs.webp";
 import eq from "@/assets/eq.webp";
 import { RubiksCube } from "@/components/RubiksCube";
 import avatar from "@/assets/avatar.webp";
+import mask from "@/app/mask.png";
 import { LanguageProgressBar } from "@/components/LanguageProgressBar";
 import duolingo from "@/assets/duolingo.webp";
 import burmaTheLongestWar from "@/assets/burma-the-longest-war.webp";
@@ -136,15 +137,29 @@ export default function AboutPage() {
       <ScrollProgress />
       <section className="grid md:grid-cols-3 gap-8 md:gap-12 items-center">
         <div className="md:col-span-1 flex justify-center md:justify-start">
-          <Image
-            src={avatar}
-            alt="A photo of Chan Nyein Tun"
-            width={300}
-            height={300}
-            className="clip-torn-paper object-cover w-full max-w-[300px] md:max-w-full"
-            priority
-            data-ai-hint="profile photo"
-          />
+          <div 
+            className="relative w-full max-w-[300px] md:max-w-full"
+            style={{
+              WebkitMask: `url(${mask.src})`,
+              mask: `url(${mask.src})`,
+              WebkitMaskSize: 'contain',
+              maskSize: 'contain',
+              WebkitMaskRepeat: 'no-repeat',
+              maskRepeat: 'no-repeat',
+              WebkitMaskPosition: 'center',
+              maskPosition: 'center'
+            }}
+          >
+            <Image
+              src={avatar}
+              alt="A photo of Chan Nyein Tun"
+              width={300}
+              height={300}
+              className="object-cover w-full"
+              priority
+              data-ai-hint="profile photo"
+            />
+          </div>
         </div>
         <div className="md:col-span-2 space-y-4">
           <h1 className="text-4xl font-bold font-headline text-center md:text-left">About Me</h1>
