@@ -19,6 +19,7 @@ import fbdl from "@/assets/fbdl.webp";
 import offlinelearning from "@/assets/offline-learn.webp";
 import qr from "@/assets/qr.webp";
 import spwrite from "@/assets/spwrite.webp";
+import use_scrimba from "@/assets/use-scrimba.webp";
 
 const designer = {
   designerName: "Novem Pai",
@@ -37,11 +38,10 @@ const projects: Project[] = [
   },
   {
     title: "use-scrimba",
-    description: "A powerful React hook that brings Scrimba-like functionality to your applications! Record and replay Monaco Editor interactions with perfect synchronization, creating interactive coding tutorials and screencasts.",
+    description: "A powerful React hook that can record and replay Code Editor interactions with perfect synchronization, creating interactive coding tutorials.",
     techStack: ["TypeScript", "React.js", "Monaco Editor"],
-    images: [],
-    link: "https://www.npmjs.com/package/use-scrimba",
-    videoUrl: "https://www.youtube.com/watch?v=_IcGhKsWN08",
+    images: [use_scrimba],
+    link: "https://use-scrimba.vercel.app/",
     dataAiHint: "Scrimba-like functionality",
   },
   {
