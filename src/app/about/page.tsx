@@ -7,7 +7,7 @@ import Link from "next/link";
 import thinkfs from "@/assets/think-fs.webp";
 import eq from "@/assets/eq.webp";
 import { RubiksCube } from "@/components/RubiksCube";
-import avatar from "@/assets/avatar.webp";
+import avatar from "@/assets/avatar.png";
 import mask from "@/app/mask.png";
 import { LanguageProgressBar } from "@/components/LanguageProgressBar";
 import duolingo from "@/assets/duolingo.webp";
@@ -155,6 +155,9 @@ export default function AboutPage() {
               alt="A photo of Chan Nyein Tun"
               width={300}
               height={300}
+              style={{
+                filter: "sepia(0.5)"
+              }}
               className="object-cover w-full"
               priority
               data-ai-hint="profile photo"
