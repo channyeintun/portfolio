@@ -106,6 +106,13 @@ const certifications = [
     date: "July 21, 2025",
     url: "https://www.udemy.com/certificate/UC-53eb98e1-1e6a-431c-b2ac-f3410be88535/",
     icon: Award,
+  },
+  {
+    name: "Google Project Management",
+    issuer: "Coursera",
+    date: "Aug 31, 2025",
+    url: "https://www.coursera.org/account/accomplishments/professional-cert/40PAUT7HVBLI",
+    icon: Award,
   }
 ];
 
@@ -318,7 +325,7 @@ export default function AboutPage() {
             <div className="text-center sm:text-left px-8 pb-8 sm:p-0">
               <h3 className="text-2xl font-headline font-semibold mb-4">A Hobby in Hand</h3>
               <p className="text-lg text-muted-foreground font-thin">
-                Beyond programming, I enjoy the mental challenge and dexterity of solving a Rubik's Cube. It's a great way to unwind and keep my problem-solving skills sharp. I use both the beginner's method for fun and the more advanced CFOP method.
+                Beyond programming, I enjoy solving a Rubik's Cube. It's a great way to unwind and keep my problem-solving skills sharp. I use both the beginner's method for fun and the more advanced CFOP method.
               </p>
             </div>
           </CardContent>
