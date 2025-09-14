@@ -17,7 +17,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 
 const skills = [
   "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)",
-  "React Native", "Redux", "TanStack Query", "TanStack Virtual", "GraphQL", "NestJs", "Go", "REST APIs", "TailwindCSS",
+  "React Native", "Redux", "TanStack Query", "Tiptap", "GraphQL", "NestJs", "Go", "REST APIs", "TailwindCSS",
   "HTML5", "CSS3", "a11y", "Java", "Spring", "Docker", "Git"
 ];
 
